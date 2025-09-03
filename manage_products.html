@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTech - Admin Panel - Online Shopping Store</title>
+    <link rel="icon" href="logo.jpg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Index.html">
+    <link rel="stylesheet" href="admin_panel.html">
+    <link rel="stylesheet" href="manage_products.html">
+    <link rel="stylesheet" href="manage_users.html">
+    <link rel="stylesheet" href="product_adding.html">
+    <link rel="stylesheet" href="product_updating.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="body">
+
+    <!--main nave bar-->
+    <nav class="navbar fixed-top d-flex sticky-top">
+        <div class="container-fluid" style="padding-left: 5%;padding-right: 5%;">
+
+            <div class="logo">
+                <img src="WhatsApp Image 2025-08-31 at 10.46.29_8a006036.png" alt="" srcset="">
+            </div>
+            <div class="search-bar d-none d-lg-flex">
+                <input type="text" placeholder="Search for products.." />
+                <a href="#"><button type="submit"><i class="fa fa-search"></i></button></a>
+            </div>
+            <ul class="nav-links">
+
+                <li>
+                    <button onclick="toggleDropdown()" class="dropbtn m-1"><i class="fas fa-user"
+                            style="font-size: 20px; margin-top: 30px;"></i> Account
+                    </button>
+                    <div class="dropdown">
+                        <div id="myDropdown" class="dropdown-content">
+                            <div class="dropdown-header">
+                                <button type="button" class="btn_login" data-bs-toggle="modal"
+                                    data-bs-target="#signinModal">
+                                    Sign In
+                                </button>
+                                <a href="#" class="register-link" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Register
+                                </a>
+                            </div>
+                            <div class="menu-list">
+                                <a href="manage_products.html">My Products</a>
+                                <a href="manage_users.html">User Manegement</a>
+                                <a href="admin_panel.html">Admin Panel</a>
+                                <a href="Index.html">NewTech Store</a>
+                                <a href="#">My Account</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <div class="d-lg-none p-1" style="margin-top: 25px;">
+                    <button class=" d-flex rounded" style="margin-top: 10px;" data-bs-toggle="offcanvas"
+                        data-bs-target="#slider" aria-controls="offcanvas" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="font-size: small; "></span>
+
+                    </button>
+                </div>
+                
+            </ul>
+            
+        </div>
+
+    </nav>
+
+    <!-- nave bar -->
+    <nav class="navbar navbar-expand-lg  d-md-block d-none" style="height: 50px;margin-bottom: 10px;">
+        <div class="container-fluid" style="padding-left: 5%;padding-right: 5%;">
+
+            <div class="collapse navbar-collapse justify-content-start" id="mainMenu">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="admin_panel.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manage_products.html">Product Management | </a></li>
+                    <li class="nav-item"><a class="nav-link" href="manage_users.html">User Manegement | </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid" style="padding-left: 5%;padding-right: 5%;">
+        <div class="d-flex justify-content-between">
+            <h1 class="fw-bold">Product Manage</h1>
+            <a href="product_adding.html">
+                <button class=" Add-Product-btn bg-danger ">
+                    <span>+ </span> Add Product
+                </button>
+            </a>
+
+        </div>
+        <div class="cart-section ">
+            <hr>
+            <div class="cart-container">
+                <div class="cart-item row ">
+
+                    <img class=" col-3 " src="ACER-AL15-I5-8GB-512-SIL-01.webp" alt="ACER Laptop">
+                    <div class="col-9  cart-item-details">
+                        <h5>ACER Aspire Lite 15 (AL15-72P) 13th Intel Core i5 13500H, 8GB RAM, 512GB SSD, Cool
+                            Silver
+                        </h5>
+                        <p>ACER-AL15-I5-8GB-512-SIL</p>
+                        <h6 style="font-size: 20px;">Rs. 199,999</h6>
+
+                    </div>
+                    <div class="quantity-btn ms-auto">
+                        <div class="mt-2 card-remove-buynow">
+                            <div class="mt-2 card-remove-buynow">
+                                <button class="btn btn-light btn-sm me-2 btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#Product-Remove-Modal">
+                                    <i class="fa fa-trash"></i>
+                                    Remove</button>
+                                <a href="product_updating.html"><button class="btn btn-danger btn-sm"> Update Product</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cart-item row ">
+
+                    <img class=" col-3 " src="ACER-AL15-I5-8GB-512-SIL-01.webp" alt="ACER Laptop">
+                    <div class="col-9  cart-item-details">
+                        <h5>ACER Aspire Lite 15 (AL15-72P) 13th Intel Core i5 13500H, 8GB RAM, 512GB SSD, Cool
+                            Silver
+                        </h5>
+                        <p>ACER-AL15-I5-8GB-512-SIL</p>
+                        <h6 style="font-size: 20px;">Rs. 199,999</h6>
+
+                    </div>
+                    <div class="quantity-btn ms-auto">
+                        <div class="mt-2 card-remove-buynow">
+                            <div class="mt-2 card-remove-buynow">
+                                <button class="btn btn-light btn-sm me-2 btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#Product-Remove-Modal">
+                                    <i class="fa fa-trash"></i>
+                                    Remove</button>
+                                <a href="update_prduct.html"><button class="btn btn-danger btn-sm"> Update Product</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--Product-Remove-Modal-->
+    <div class="modal fade" id="Product-Remove-Modal" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="mb-3 d-flex justify-content-center">
+                    <img src="images (2).png" alt="" style="max-width: 80px;">
+                </div>
+                <p class="mb-3 fw-bold">
+                    Product Remove successfully!!!<a href="#" class="text-primary"></a>.
+                </p>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- side bar (only mobile) -->
+    <div class="col-lg-3 col-md-12 offcanvas offcanvas-start d-lg-none" style="width: 70%;" tabindex="-1" id="slider">
+        <div class="offcanvas-header d-lg-none">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvs-body" >
+            <div class="product-catagary d-block mb-0">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    
+                    <table class="table .table-striped ">
+                        <tbody>
+                            <tr>
+                                <td><a href="admin_panel.html" style="text-decoration: none; color: inherit;">Home</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="manage_products.html" style="text-decoration: none; color: inherit;">Prouduct Manegement</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="manage_users.html" style="text-decoration: none; color: inherit;">User Manegement</a></td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- floter -->
+    <footer class="footer">
+        <div class="container-fluid" style="padding-left: 5%;padding-right: 5%;">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About NewTech</h5>
+                    <p>Your one-stop shop for the latest tech gadgets and accessories. We offer a wide range of
+                        products to suit all your tech needs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mt-2">Contact Us</h5>
+                    <p>123 Tech Street, Innovation City, Country</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: abc@gmail.com
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mt-2">Follow Us</h5>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                &copy; 2024 NewTech. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="bootstrap.js"></script>
+    <script src="dropdun.js"></script>
+
+</body>
+
+</html>
